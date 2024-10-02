@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
         * {
@@ -17,7 +20,7 @@
             box-sizing: border-box;
         }
 
-        body {
+        .body {
             font-family: 'Quicksand', sans-serif;
             color: #324e63;
         }
@@ -26,27 +29,24 @@
             width: 100%;
             min-height: 100vh;
             display: flex;
-            background: linear-gradient(28deg, rgba(2,0,36,1) 0%, rgba(51,114,190,1) 0%, rgba(94,8,112,1) 0%, rgba(90,7,101,1) 12%, rgba(105,9,121,1) 38%, rgba(90,38,140,1) 47%, rgba(75,68,160,1) 56%, rgba(65,88,173,1) 62%, rgba(0,212,255,1) 100%);
-            justify-content: center;
-            align-items: center;
+            background: linear-gradient(28deg, rgba(2, 0, 36, 1) 0%, rgba(51, 114, 190, 1) 0%, rgba(94, 8, 112, 1) 0%, rgba(90, 7, 101, 1) 12%, rgba(105, 9, 121, 1) 38%, rgba(90, 38, 140, 1) 47%, rgba(75, 68, 160, 1) 56%, rgba(65, 88, 173, 1) 62%, rgba(0, 212, 255, 1) 100%);
         }
 
         .profile-card {
             width: 100%;
             min-height: 400px;
             max-width: 500px;
-            background: #fff;
+            background: #ffff;
             margin: auto;
-            box-shadow: 0px 8px 60px -10px rgba(13,28,39,0.6);
+            box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
             border-radius: 12px;
-            padding: 20px;
-            text-align: center;
         }
 
         .profile-card-img {
             width: 150px;
             height: 150px;
             margin: auto;
+            transform: translateY(-50%);
             border-radius: 50%;
             overflow: hidden;
             position: relative;
@@ -62,11 +62,11 @@
         }
 
         .profile-card-info {
-            margin-bottom: 20px;
+            text-align: center;
         }
 
-        .profile-card-info > * {
-            margin-bottom: 10px;
+        .profile-card-info>* {
+            margin-bottom: 15px;
             font-weight: 700;
         }
 
@@ -127,51 +127,55 @@
             box-shadow: 0px 4px 30px rgb(223 45 70 / 60%);
         }
 
+        /* Nút để lại lời nhắn */
         .message-button {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 20px auto;
-            background: linear-gradient(45deg, #4caf50, #8bc34a);
-            color: #fff;
-            text-align: center;
-            border-radius: 25px;
-            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
             font-weight: 600;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 50px;
             text-decoration: none;
-            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 4px 20px rgba(40, 167, 69, 0.4);
         }
 
         .message-button:hover {
-            background: linear-gradient(45deg, #8bc34a, #4caf50);
-            transform: scale(1.05);
+            background-color: #218838;
+        }
+
+        .message-button:active {
+            background-color: #1e7e34;
         }
 
         @media (max-width: 600px) {
             .profile-card {
-                padding: 15px;
+                max-width: 90%;
             }
 
-            .profile-card-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .profile-card-info .name {
+            .profile-card-social .item {
+                width: 45px;
+                height: 45px;
                 font-size: 18px;
             }
 
             .message-button {
-                padding: 8px 16px;
-                font-size: 14px;
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="profile-card">
             <div class="profile-card-img">
-                <img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/461462906_1824468798077371_3238977476273987337_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeF6Z2fR_mgpVjxAtlojyizxLp_5W_Yl5Wwun_lb9iXlbFo7dbAjdt2IqUGUg66_c0xRJ2ctlSzVW0lNsnkVgZlt&_nc_ohc=Bves6pPOfzcQ7kNvgGAKrC_&_nc_ht=scontent.fhan2-5.fna&oh=00_AYCFB6kFkk_V3Er85j4rBrDkYYVpAeVupExBrxHwc4_6Xw&oe=66FC8FDD" alt="">
+                <img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/461462906_1824468798077371_3238977476273987337_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeF6Z2fR_mgpVjxAtlojyizxLp_5W_Yl5Wwun_lb9iXlbFo7dbAjdt2IqUGUg66_c0xRJ2ctlSzVW0lNsnkVgZlt&_nc_ohc=Bves6pPOfzcQ7kNvgGAKrC_&_nc_ht=scontent.fhan2-5.fna&oh=00_AYCFB6kFkk_V3Er85j4rBrDkYYVpAeVupExBrxHwc4_6Xw&oe=66FC8FDD"
+                    alt="">
             </div>
             <div class="profile-card-info">
                 <div class="name">NGUYỄN HỮU ĐẠT</div>
@@ -188,6 +192,7 @@
                 <a href="https://www.tiktok.com/@nhdat_25th" class="item tiktok" target="_blank">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
+
                 <a href="https://www.instagram.com/_huudat03" class="item instagram" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
@@ -198,10 +203,19 @@
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
+
             <!-- Nút để lại lời nhắn -->
-            <a href="https://forms.gle/tMBR3XB1oqkBGTBD8" class="message-button" target="_blank">Để lại lời nhắn</a>
+            <div class="message-section">
+                <a href="https://forms.gle/tMBR3XB1oqkBGTBD8" class="message-button" target="_blank">
+                    Để lại lời nhắn
+                </a>
+            </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>
