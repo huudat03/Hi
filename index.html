@@ -22,30 +22,33 @@
         body {
             font-family: 'Quicksand', sans-serif;
             color: #324e63;
+            background: linear-gradient(28deg, rgba(2, 0, 36, 1) 0%, rgba(51, 114, 190, 1) 0%, rgba(94, 8, 112, 1) 0%, rgba(90, 7, 101, 1) 12%, rgba(105, 9, 121, 1) 38%, rgba(90, 38, 140, 1) 47%, rgba(75, 68, 160, 1) 56%, rgba(65, 88, 173, 1) 62%, rgba(0, 212, 255, 1) 100%);
         }
 
         .wrapper {
             width: 100%;
             min-height: 100vh;
             display: flex;
-            background: linear-gradient(28deg, rgba(2, 0, 36, 1) 0%, rgba(51, 114, 190, 1) 0%, rgba(94, 8, 112, 1) 0%, rgba(90, 7, 101, 1) 12%, rgba(105, 9, 121, 1) 38%, rgba(90, 38, 140, 1) 47%, rgba(75, 68, 160, 1) 56%, rgba(65, 88, 173, 1) 62%, rgba(0, 212, 255, 1) 100%);
+            justify-content: center;
+            align-items: center;
         }
 
         .profile-card {
             width: 100%;
             min-height: 400px;
             max-width: 500px;
-            background: #ffff;
+            background: #fff;
             margin: auto;
             box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
             border-radius: 12px;
+            padding: 20px;
+            text-align: center;
         }
 
         .profile-card-img {
             width: 150px;
             height: 150px;
             margin: auto;
-            transform: translateY(-50%);
             border-radius: 50%;
             overflow: hidden;
             position: relative;
@@ -61,17 +64,17 @@
         }
 
         .profile-card-info {
-            text-align: center;
+            margin-top: 20px;
         }
 
         .profile-card-info>* {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
         .profile-card-info .name {
             color: rgb(108, 68, 252);
-            font-size: 20px;
+            font-size: 24px;
         }
 
         .profile-card-social {
@@ -86,7 +89,7 @@
             display: inline-flex;
             width: 55px;
             height: 55px;
-            margin: 15px;
+            margin: 10px;
             border-radius: 50%;
             align-items: center;
             justify-content: center;
@@ -95,6 +98,7 @@
             font-size: 21px;
             flex-shrink: 0;
             transition: all 0.3s;
+            text-decoration: none;
         }
 
         .profile-card-social .item:hover {
@@ -126,6 +130,7 @@
             box-shadow: 0px 4px 30px rgb(223 45 70 / 60%);
         }
 
+        /* Nút để lại lời nhắn */
         .message-section {
             text-align: center;
             margin-top: 20px;
@@ -134,15 +139,46 @@
         .message-button {
             background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 25px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
         }
 
         .message-button:hover {
             background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .profile-card {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .profile-card-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-card-info .name {
+                font-size: 20px;
+            }
+
+            .profile-card-social .item {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                margin: 10px;
+            }
+
+            .message-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
