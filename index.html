@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Hữu Đạt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: #324e63;
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            background: linear-gradient(28deg, rgba(2,0,36,1) 0%, rgba(51,114,190,1) 0%, rgba(94,8,112,1) 0%, rgba(90,7,101,1) 12%, rgba(105,9,121,1) 38%, rgba(90,38,140,1) 47%, rgba(75,68,160,1) 56%, rgba(65,88,173,1) 62%, rgba(0,212,255,1) 100%);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            width: 100%;
+            min-height: 400px;
+            max-width: 500px;
+            background: #fff;
+            margin: auto;
+            box-shadow: 0px 8px 60px -10px rgba(13,28,39,0.6);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-card-img {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            z-index: 4;
+            box-shadow: 0px 5px 50px 0px rgb(108, 68, 252), 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+        }
+
+        .profile-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-card-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-card-info > * {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .profile-card-info .name {
+            color: rgb(108, 68, 252);
+            font-size: 20px;
+        }
+
+        .profile-card-social {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-card-social .item {
+            display: inline-flex;
+            width: 55px;
+            height: 55px;
+            margin: 15px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+            font-size: 21px;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .profile-card-social .item:hover {
+            transform: scale(1.2);
+        }
+
+        .facebook {
+            background: linear-gradient(45deg, #3b5998, #0078d7);
+            box-shadow: 0px 4px 30px rgb(43 98 169 / 50%);
+        }
+
+        .tiktok {
+            background: linear-gradient(45deg, #010101, #69C9D0, #EE1D52);
+            box-shadow: 0px 4px 30px rgba(238, 29, 82, 0.5);
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            box-shadow: 0px 4px 30px rgb(120 64 190 / 60%);
+        }
+
+        .github {
+            background: linear-gradient(45deg, #333333, #626b73);
+            box-shadow: 0px 4px 30px rgb(63 65 67 / 60%);
+        }
+
+        .website {
+            background: linear-gradient(45deg, #d5135a, #f05924);
+            box-shadow: 0px 4px 30px rgb(223 45 70 / 60%);
+        }
+
+        .message-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px auto;
+            background: linear-gradient(45deg, #4caf50, #8bc34a);
+            color: #fff;
+            text-align: center;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .message-button:hover {
+            background: linear-gradient(45deg, #8bc34a, #4caf50);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .profile-card {
+                padding: 15px;
+            }
+
+            .profile-card-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-card-info .name {
+                font-size: 18px;
+            }
+
+            .message-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="profile-card">
+            <div class="profile-card-img">
+                <img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/461462906_1824468798077371_3238977476273987337_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeF6Z2fR_mgpVjxAtlojyizxLp_5W_Yl5Wwun_lb9iXlbFo7dbAjdt2IqUGUg66_c0xRJ2ctlSzVW0lNsnkVgZlt&_nc_ohc=Bves6pPOfzcQ7kNvgGAKrC_&_nc_ht=scontent.fhan2-5.fna&oh=00_AYCFB6kFkk_V3Er85j4rBrDkYYVpAeVupExBrxHwc4_6Xw&oe=66FC8FDD" alt="">
+            </div>
+            <div class="profile-card-info">
+                <div class="name">NGUYỄN HỮU ĐẠT</div>
+                <div class="position">25/11/2003</div>
+                <div>nhdat2511@gmail.com</div>
+                <div class="location">
+                    <i class="fa-solid fa-map-location"></i> Hoàng Mai, Hà Nội
+                </div>
+            </div>
+            <div class="profile-card-social">
+                <a href="https://www.facebook.com/profile.php?id=100015428050890" class="item facebook" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@nhdat_25th" class="item tiktok" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/_huudat03" class="item instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/huudat03" class="item github" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://huudat03.github.io/Doyouloveme" class="item website" target="_blank">
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
+            <!-- Nút để lại lời nhắn -->
+            <a href="https://forms.gle/tMBR3XB1oqkBGTBD8" class="message-button" target="_blank">Để lại lời nhắn</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
